@@ -10,21 +10,6 @@ function irina_html_head_alter(&$head_elements) {
 }
 
 /**
- * Insert themed breadcrumb page navigation at top of the node content.
- */
-function irina_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-  if (!empty($breadcrumb)) {
-    // Use CSS to hide titile .element-invisible.
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-    // comment below line to hide current page to breadcrumb
-	$breadcrumb[] = drupal_get_title();
-    $output .= '<nav class="breadcrumb">' . implode(' » ', $breadcrumb) . '</nav>';
-    return $output;
-  }
-}
-
-/**
  * Override or insert variables into the page template.
  */
 function irina_preprocess_page(&$vars) {
