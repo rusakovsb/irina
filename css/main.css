@@ -1,0 +1,514 @@
+/*-------------------------------------------*
+/* Fonts
+/*-------------------------------------------*/
+
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansRegular/MuseoSansRegular.eot");
+    src: url("../fonts/MuseoSansRegular/MuseoSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansRegular/MuseoSansRegular.woff") format("woff"),
+    url("../fonts/MuseoSansRegular/MuseoSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansBold/MuseoSansBold.eot");
+    src: url("../fonts/MuseoSansBold/MuseoSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansBold/MuseoSansBold.woff") format("woff"),
+    url("../fonts/MuseoSansBold/MuseoSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansItalic/MuseoSansItalic.eot");
+    src: url("../fonts/MuseoSansItalic/MuseoSansItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansItalic/MuseoSansItalic.woff") format("woff"),
+    url("../fonts/MuseoSansItalic/MuseoSansItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansMedium/MuseoSansMedium.eot");
+    src: url("../fonts/MuseoSansMedium/MuseoSansMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansMedium/MuseoSansMedium.woff") format("woff"),
+    url("../fonts/MuseoSansMedium/MuseoSansMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+/*-------------------------------------------*
+/* Body, Common classes
+/*-------------------------------------------*/
+
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none !important;
+    background-color: transparent;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "MuseoSans";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: normal;
+    font-style: normal;
+    color: #000;
+	letter-spacing: 1px;
+    position: relative;
+}
+
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+main, 
+nav, 
+section, 
+summary {
+    display: block;
+}
+
+p {
+    margin: 0 0 30px 0;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+ul li,
+ul li.leaf {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #58595b;
+    transition: color 0.2s linear;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/*-------------------------------------------*
+/* Layout
+/*-------------------------------------------*/
+
+#container,
+.region-nav,
+.region-footer {
+    display: -ms-flexbox;
+    display: flex;  
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.region-nav,
+.region-footer {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#container {
+    max-width: 1530px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+	-ms-flex-direction: column;
+    flex-direction: column;
+}
+
+body.sidebar-first #content-wrapper,
+body.sidebar-second #content-wrapper {
+	display: -ms-flexbox;
+    display: flex;
+}
+
+#page-content {
+    position: relative;
+}
+
+body.sidebar-second #page-content,
+#sidebar-first {
+    -ms-flex: 0 0 60%;
+	flex: 0 0 60%;
+	max-width: 60%;
+	padding: 0 30px 0 0;	
+}
+
+body.sidebar-first #page-content,
+#sidebar-second {
+    -ms-flex: 0 0 40%;
+	flex: 0 0 40%;
+	max-width: 40%;
+	padding: 0 0 0 30px;
+}
+
+/*-------------------------------------------*
+/* Navigation
+/*-------------------------------------------*/
+
+#nav {
+    padding: 30px 0 0 0;
+}
+
+#logo {
+	width: 110px;
+	padding: 10px;
+	background-color: #58595b;
+	transition: 0.2s linear;
+}
+
+#logo:hover {
+	background-color: #000;
+}
+
+#logo img {
+	display: block;
+	width: 100%;
+    height: auto;
+}
+
+#block-system-main-menu {
+	text-transform: uppercase;
+}
+
+#block-system-main-menu ul.menu li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#block-system-main-menu ul.menu li a {
+	font-size: 17px;
+	display: block;
+	position: relative;
+	padding: 10px 0;
+	color: #58595b;
+}
+
+#block-system-main-menu ul.menu li a:hover,
+#block-system-main-menu ul.menu li a:focus,
+#block-system-main-menu ul.menu li a:active {
+	color: #000;
+}
+
+#block-system-main-menu ul.menu li a.active {
+	color: #c1c1c1;
+}
+
+#block-system-main-menu ul.menu li a:after {
+	content: "";
+	height: 2px;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    background-color: #000;
+    opacity: 0;
+	transition: 0.2s linear;
+}
+
+#block-system-main-menu ul.menu li a:hover:after {	
+	bottom: 2px;
+    opacity: 1;
+}
+
+/*-------------------------------------------*
+/* Site name & slogan
+/*-------------------------------------------*/
+
+#site-name-slogan {
+	color: #58595b;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#site-name {
+    text-transform: uppercase;
+    font-size: 45px;
+	letter-spacing: 2px;
+}
+
+#site-slogan {
+    font-size: 18px;
+}
+
+/*-------------------------------------------*
+/* Overlay
+/*-------------------------------------------*/
+
+#overlay {
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: url("../images/loading.gif") no-repeat center top #fff;
+}
+
+/*-------------------------------------------*
+/* Nodes
+/*-------------------------------------------*/
+
+.node {
+    line-height: 2;
+}
+
+.node .field-type-image {
+    width: 500px;
+    float: right;
+	margin: 0 0 15px 60px;
+}
+
+.node .field-type-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.node ul {
+    padding: 0 0 15px 30px;
+}
+
+.node ul li:before {
+    content: "";
+    display: inline-block;    
+    margin: 0 15px 0 0;
+	vertical-align: 0.25em;
+    width: 15px;
+	height: 1px;
+	background-color: #000;
+}
+
+/*-------------------------------------------*
+/* Headings
+/*-------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #58595b;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h2, 
+.block-title {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+/*-------------------------------------------*
+/* Forms
+/*-------------------------------------------*/
+
+.form-item {
+    margin: 0 0 15px 0;
+}
+
+label {
+    display: block;
+    margin: 0 0 5px 0px;
+    font-weight: 500;	
+	font-size: 1.2rem;	
+}
+
+input.form-text,
+textarea,
+select {
+	font-family: "MuseoSans";
+    font-weight: 400;
+    border: 1px solid #c1c1c1;
+    padding: 10px;
+    outline: none;    
+    width: 100%;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+input.form-text:hover,
+textarea:hover,
+select:hover {
+	border: 1px #58595b solid;
+
+}
+
+input.form-text:focus,
+textarea:focus,
+select:focus {
+	border: 1px #000 solid;
+}
+
+input.form-submit {
+    font-family: "MuseoSans";
+    font-weight: 400;
+    color: #fff;
+    background-color: #58595b;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 15px 30px;
+    border: none;
+    transition: 0.2s linear;
+}
+
+input.form-submit:hover,
+input.form-submit:focus {   
+    background-color: #000;
+}
+
+.form-textarea-wrapper textarea {
+    width: 100%;
+}
+
+.webform-client-form-19 {
+    width: 50%;
+}
+
+/*-------------------------------------------*
+/* Footer
+/*-------------------------------------------*/
+
+#footer {
+    padding: 30px 0;
+    font-size: 15px;
+}
+
+#footer p {
+    margin: 0;
+}
+
+/*-------------------------------------------*
+/* Colorbox
+/*-------------------------------------------*/
+
+#colorbox, #cboxOverlay, #cboxWrapper {position:absolute; top:0; left:0; z-index:9999; outline: none;}
+#cboxOverlay {position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft {clear:left;}
+#cboxContent {position:relative; margin: 50px;}
+#cboxLoadedContent {overflow:auto;}
+#cboxLoadingOverlay, #cboxLoadingGraphic {position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {cursor:pointer;}
+.cboxIframe {width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent {box-sizing:content-box;}
+#cboxOverlay {background:#000;}
+#cboxContent {overflow:visible;}
+#cboxError {padding:50px;}
+#cboxCurrent {position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+#cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose {text-indent:-9999px; position:absolute;}
+
+.cboxPhoto {
+   float:left; 
+   margin: auto;
+   display:block;
+   background:#fff;
+}
+
+#cboxLoadedContent  {
+   background: #fff;
+}
+
+#cboxLoadingGraphic {
+    background: #fff url("../images/loading.gif") no-repeat center center;
+}
+
+#cboxTitle {
+   color:#fff; 
+   width: 100%; 
+   text-align: center;
+   padding: 5px 0 0 0;
+}
+
+#cboxPrevious,
+#cboxNext {
+    width:40px; 
+    height:40px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    top: 50%; 
+    margin-top: -20px;
+    z-index: 10000;
+}
+
+#cboxPrevious {
+    background-image: url("../images/prev.svg"); 
+    left: -55px; 
+}
+
+#cboxNext {
+    background-image: url("../images/next.svg");
+    right: -55px; 
+}
+
+#cboxClose {
+    width:20px; 
+    height:20px; 
+    background-image: url("../images/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    right: -30px; 
+    top: -30px; 
+    z-index: 10000;
+}

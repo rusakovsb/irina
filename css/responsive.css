@@ -1,0 +1,76 @@
+/*-------------------------------------------*
+/* < 1200
+/*-------------------------------------------*/
+
+@media all and (max-width: 1199px) {
+
+#block-system-main-menu,
+.galleries-item__title {
+    display: none;
+}
+
+#logo {
+    width: 60px;
+}
+
+.social-item {
+    padding: 0 5px;
+}
+
+#site-name {
+    font-size: 28px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+body.sidebar-first #content-wrapper, 
+body.sidebar-second #content-wrapper,
+.region-footer {
+    -ms-flex-direction: column;
+    flex-direction: column;    
+}
+
+body.sidebar-second #page-content,
+#sidebar-first,
+body.sidebar-first #page-content,
+#sidebar-second {
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: none;
+    padding: 0;
+}
+
+}
+
+/*-------------------------------------------*
+/* < 992
+/*-------------------------------------------*/
+
+@media all and (max-width: 991px) {
+
+.masonry-item {
+    width: 50%; 
+}
+
+}
+
+/*-------------------------------------------*
+/* < 768
+/*-------------------------------------------*/
+
+@media all and (max-width: 767px) {
+
+.masonry-item {
+    width: 100%;
+    padding: 0 15px 15px 15px;    
+}
+
+.node .field-type-image {
+    width: 100%;
+    float: none;
+    margin: 0 0 15px 0;
+}
+
+}

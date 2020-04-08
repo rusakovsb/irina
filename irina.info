@@ -1,0 +1,41 @@
+name = Irina
+description = Theme for Bitus-Bichan.com
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/views.css
+stylesheets[all][] = css/mobilepanel.css
+stylesheets[all][] = css/responsive.css
+
+scripts[] = js/imagesloaded.js
+scripts[] = js/masonry.js
+scripts[] = js/tweenmax.js
+scripts[] = js/mobilepanel.js
+scripts[] = js/smoothscroll.js
+scripts[] = js/main.js
+
+regions[nav]            = Navigation
+regions[sidebar_first]  = Sidebar First
+regions[content]        = Content
+regions[sidebar_second] = Sidebar Second
+regions[footer]         = Footer
+regions[mobile_panel]   = Mobile Panel
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Information
+version = "1.0"
+core = "7.x"
+project = "drupal"
+
+
